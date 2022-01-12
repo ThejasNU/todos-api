@@ -3,6 +3,7 @@ const app = express();
 const pool = require("./db");
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/todos", async (req, res) => {
 	try {
